@@ -1,0 +1,128 @@
+<!-- Khai báo phiên bản html5 -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- body -->
+<body>
+    <!-- Bộ thẻ heading -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <!-- Bộ thẻ đoạn văn -->
+    <p>
+        Paragraph 1 <br />
+        Paragraph 2 <br />
+        Paragraph 2
+        Paragraph 2
+        Paragraph 2
+        Paragraph 2
+        Paragraph 2
+    </p>
+    <hr />
+    <p>Paragraph 2</p>
+    <!-- Thẻ đoạn text: span -->
+    <span>This is a span text 1</span>
+    <span>This is a span text 2</span>
+    <br />
+    <!-- Thẻ xuống dòng: thẻ br -->
+    <!-- Thẻ gạch ngang toàn bộ trang: thẻ hr -->
+
+    <!-- Bộ thẻ định dạng văn bản -->
+    <!-- Thẻ in đậm: thẻ b hoặc strong -->
+    <b>This is bold text</b>
+    <strong>This is strong text</strong>
+    <!-- Thẻ in nghiêng: thẻ i hoặc em -->
+    <i>This is italic text</i>
+    <em>This is emphasized text</em>
+    <!-- Thẻ gạch chân: thẻ u -->
+    <u>This is underlined text</u>
+    <!-- Thẻ gạch ngang: thẻ s hoặc del -->
+    <s>This is strikethrough text</s>
+    <del>This is deleted text</del>
+    <!-- Thẻ định dạng màu: thẻ font -->
+    <font color="red">This is red text</font>
+    <font color="blue">This is blue text</font>
+
+    <!-- Thẻ ảnh: thẻ img -->
+    <!-- Chèn ảnh trực tiếp từ internet dùng đường dẫn tuyệt đối: không có mạng không hiển thị được và khi ảnh die trên internet thì ảnh trong web die theo -->
+    <img src="https://store-images.s-microsoft.com/image/apps.23455.13703813498146682.59ea0965-457f-440d-a02e-2a8fce6ff46e.94590cec-330a-403b-9bd5-66eb98425348" width="100px" height="100px" />
+    <!-- Chèn ảnh từ máy tính local với ảnh nằm ngang cấp hoặc có cấp nhỏ hơn: dùng đường dẫn tương đối -->
+    <img src="images/w3school.png" width="100px" height="100px" />
+    <!-- Chèn ảnh từ máy tính local với ảnh nằm ngang cấp lớn hơn hoặc khác thư mục-->
+    <img src="../images/w3school.png" width="100px" height="100px" />
+
+    <!-- Thẻ liên kết: thẻ a -->
+    <!-- Liên kết đến trang web khác ở trên internet: target="_blank" mở ra 1 tab mới -->
+    <a href="https://www.w3schools.com" target="_blank">Visit W3Schools</a>
+    <!-- Liên kết đến 1 trang khác trong cùng project: đường dẫn dùng đường dẫn tương đối (tương tự img) -->
+    <a href="session1_other_page.html">Go to Other Page</a>
+    <!-- Neo liên kết -->
+    <a href="session1_other_page.html#h4_tag">Go to &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Other Page h4</a>
+    <!-- Entity & symbols -->
+    <p>Copyright &#169; bkacad 2026</p>
+
+    <!-- Thẻ danh sách -->
+    <!-- Danh sách không thứ tự: thẻ ul -->
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <!-- Danh sách có thứ tự: thẻ ol -->
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <!-- Thay đổi kiểu đánh dấu đầu li (order list): thêm type="" vào sau ol
+        Một số type:
+            A: chữ hoa
+            a: chữ thường
+            I: số La Mã hoa
+            i: số La Mã thường
+            1: số thường 
+    -->
+    <ol type="i">
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ol>
+    <!-- Thay đổi kiểu đánh dấu đầu li (unorder list): thêm type="" vào sau ul
+        Một số type:
+            square: hình vuông đen
+            circle: hình tròn rỗng
+            disc: hình tròn đen
+    -->
+     <ul type="square">
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ul>
+    <!-- Lồng 1 list vào trong 1 list khác: Lồng ul hoặc ol vào trong li của 1 list -->
+    <ul>
+        <li>
+            Ngành lập trình
+            <ol>
+                <li>D01K18</li>
+                <li>D02K18</li>
+            </ol>
+        </li>
+        <li>
+            Ngành quản trị mạng
+            <ol type="i">
+                <li>N01K18</li>
+                <li>N02K18</li>
+                <li>N03K18</li>
+                <li>N04K18</li>
+            </ol>
+        </li>
+    </ul>
+</body>
