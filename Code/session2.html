@@ -1,0 +1,101 @@
+<!-- Khai báo phiên bản html5 -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- body -->
+<body>
+    <!-- Tạo bảng chứa thông tin sinh viên, 
+    border: kẻ viền cho bảng
+    cellspacing: khoảng cách giữa các ô trong bảng,
+    cellpadding: khoảng cách từ viền ô đến nội dung bên trong ô
+    width: chiều rộng (chiều ngang) của bảng (tính theo % hoặc px) -->
+    <table border="1px" cellspacing="0px" cellpadding="5px" width="100%">
+        <!-- Tiêu đề của bảng: thẻ caption -->
+        <caption>Thông tin sinh viên</caption>
+        <!-- Tạo phần đầu của bảng -->
+        <thead>
+            <!-- Tạo hàng chứa các tiêu đề của bảng -->
+            <tr>
+                <!-- Tạo các ô chứa tiêu đề của các cột trong bảng -->
+                <th>STT</th>
+                <th>Khóa</th>
+                <th>MSV</th>
+                <th>Họ và tên</th>
+                <!-- Gộp các ô trong 1 hàng: colspan="số ô cần gộp tính từ ô đầu tiên muốn gộp"
+                Sau khi gộp thì tổng số ô trong hàng này phải = tổng số ô của mỗi hàng khác
+                => Phải xóa những ô còn lại được gộp trong hàng -->
+                <th colspan="4">Trạng thái</th>
+            </tr>
+        </thead>
+        <!-- Tạo phần thân của bảng -->
+        <tbody>
+            <!-- Tạo hàng chứa thông tin của sinh viên: mỗi hàng là 1 tr -->
+            <tr>
+                <!-- Tạo các ô chứa thông tin của sinh viên: mỗi ô là 1 td -->
+                <td>1</td>
+                <!-- Gộp các ô thẳng nhau ở các hàng liền nhau: rowspan="số ô cần gộp ở tính từ từ hàng đầu tiên cần gộp"
+                Sau khi gộp thì tổng số ô trong 1 hàng phải = tổng số ô của mỗi hàng khác (tổng số ô ở các hàng = số hàng được gộp * số ô của mỗi hàng) 
+                => xóa những ô tương ứng ở các hàng còn lại được gộp -->
+                <!-- Căn nội dung trong ô theo chiều ngang: align
+                    align="left": căn trái
+                    align="center": căn giữa
+                    align="right": căn phải 
+                -->
+                <!-- Căn nội dung trong ô theo chiều dọc: valign
+                    valign="top": căn trên
+                    valign="middle": căn giữa
+                    valign="bottom": căn dưới
+                -->
+                <td rowspan="2" align="center" valign="bottom">K18</td>
+                <td>BKC18295</td>
+                <td>Cao Thành Đạt</td>
+                <td>Đi học</td>
+                <td>Nghỉ</td>
+                <td>Muộn</td>
+                <td>Nghỉ có phép</td>
+            </tr>
+            <tr>
+                <!-- Tạo các ô chứa thông tin của sinh viên: mỗi ô là 1 td -->
+                <td>2</td>
+                <td>BKC18055</td>
+                <td>Phạm Lê Thành An</td>
+                <td>Đi học</td>
+                <td>Nghỉ</td>
+                <td>Muộn</td>
+                <td>Nghỉ có phép</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Form: Tạo ra form thu thập thông tin sinh viên -->
+    <form>
+        <input type="hidden" name="id" value="1" />
+        Họ tên: <input type="text" /><br />
+        Mã sinh viên: <input type="text" /><br />
+        Khóa: <input type="number" /><br />
+        Ngày sinh: <input type="date" /><br />
+        Giới tính: <input type="radio" name="gioi_tinh">Nam <input type="radio" name="gioi_tinh">Nữ <br />
+        Sở thích: <input type="checkbox"> Ngủ trong giờ học <input type="checkbox"> Chơi game trong giờ <input type="checkbox"> Nói chuyện phá lớp <br />
+        Email: <input type="email" /><br />
+        Mật khẩu: <input type="password" /><br />
+        Avatar: <input type="file" /><br />
+        Ghi chú: <textarea></textarea><br />
+        <!-- Dropdown list -->
+        Chức vụ: <select>
+            <option> Lớp trưởng </option>
+            <option> Lớp phó </option>
+            <option> Thành viên </option>
+        </select><br>
+        <!-- <input type="button" value="Button" /> -->
+        <button type="button">Button</button>
+        <!-- <input type="submit" value="Submit" /> -->
+        <button>Submit</button>
+        <!-- <input type="reset" value="Reset" /> -->
+        <button type="reset">Reset</button>
+    </form>
+</body>
