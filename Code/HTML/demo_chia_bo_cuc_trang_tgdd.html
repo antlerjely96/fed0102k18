@@ -1,0 +1,59 @@
+<!-- Khai báo phiên bản html5 -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Internal CSS -->
+    <style>
+        /* Chọn theo tag name */
+        div {
+            background-color: yellow;
+            color: violet;
+        }
+        /* Chọn theo ID của thẻ */
+        #slide_banner {
+            background-color: green;
+            color: white;
+        }
+        /* Chọn theo class của thẻ */
+        .thong_tin {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="../CSS/demo1.css" />
+</head>
+<body>
+    <!-- Inline CSS -->
+    <div style="background-color: red;">
+        Banner quảng cáo
+    </div>
+    <div>
+        <div>Menu thông tin</div>
+        <div>Menu các sản phẩm</div>
+    </div>
+    <div style="width: 1000px">
+        <div id="slide_banner">Slide bannner</div>
+        <div>
+            <div style="width: 40%; background-color: lightgray;">Bộ lọc</div>
+            <div>Danh sách sản phẩm</div>
+            <div>Đánh giá</div>
+        </div>
+    </div>
+    <div class="thong_tin">
+        Thông tin ngành hàng
+    </div>
+    <div>
+        <div>
+            <div>Tổng đài hỗ trợ</div>
+            <div>Thông tin công ty</div>
+            <div>Thông tin khác</div>
+            <div>Website cùng tập đoàn</div>
+        </div>
+        <div class="thong_tin">Thông tin pháp lý</div>
+    </div>
+</body>
