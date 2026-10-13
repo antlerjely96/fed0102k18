@@ -1,0 +1,693 @@
+<!-- Khai báo phiên bản html5 -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1 {
+            background-color: yellow;
+            /* Thuộc tính đổi màu nội dung thẻ */
+            color: red;
+            /* Thay đổi kích thước */
+            font-size: 30px;
+            /* In đậm: giá trị có thể là bold, 1 số nào đó */
+            font-weight: bold;
+            /* In nghiêng */
+            font-style: italic;
+            /* font-family: chọn kiểu chữ
+                san-serif: không chân
+                serif: có chân
+                cursive: chữ viết tay
+            */
+            font-family: cursive;
+            /* Chiều cao của dòng chữ */
+            line-height: 50px;
+            /* Căn chữ theo chiều ngang
+                left: căn trái
+                right: căn phải
+                center: căn giữa
+            */
+            text-align: left;
+            /* Gạch chữ
+                none: không gạch
+                underline: gạch dưới
+                overline: gạch trên
+                line-through: gạch giữa
+            */
+            text-decoration: line-through;
+            /* Chọn chữ hoa hay chữ thường
+                uppercase: chữ hoa
+                lowercase: chữ thường
+                capitalize: chữ đầu tiên viết hoa
+            */
+            text-transform: capitalize;
+            /* Lùi đầu dòng */
+            text-indent: 20px;
+            /* Tạo bóng: offset-x | offset-y | blur-radius | color
+                offset-x:display: bóng đổ theo chiều ngang, số âm: bóng đổ sang trái, số dương: bóng đổ sang phải
+                offset-y:display: bóng đổ theo chiều dọc, số âm: bóng đổ lên trên, số dương: bóng đổ xuống dưới
+                blur-radius: độ mờ của bóng đổ, số càng lớn bóng đổ càng mờ
+                color: màu của bóng đổ
+            */
+            text-shadow: 5px 5px 5px black;
+            /* Khoảng cách giữa các ký tự */
+            letter-spacing: 5px;
+            /* Khoảng cách giữa các từ */
+            word-spacing: 10px;
+            /* Căn chữ theo chiều dọc
+                top: căn trên
+                middle: căn giữa
+                bottom: căn dưới
+            */
+            vertical-align: middle;
+            /* Chỉnh hướng chữ */
+            direction: ltr;
+            /* Màu của đường viền */
+            border-color: green;
+            /* Kiểu đường viền */
+            border-style: double;
+            /* Kích thước đường viền */
+            border-width: 15px;
+            /* Border có thể được format theo từng hướng:
+                border-top: viền phía trên
+                border-right: viền phía phải
+                border-bottom: viền phía dưới
+                border-left: viền phía trái
+            */
+            border-top: 10px solid red;
+            border-right: 10px dashed blue;
+            /* short-hand
+                border: border-width border-style border-color;
+            */
+            /* Bo góc*/
+            border-radius: 20px;
+            /* margin: khoảng cách bên ngoài của khối với các phần tử khác
+                margin có thể có giá trị âm
+            */
+            margin: 100px;
+            /* Có thể định nghĩa margin cho từng hướng:
+                margin-top: khoảng cách phía trên
+                margin-right: khoảng cách phía phải
+                margin-bottom: khoảng cách phía dưới
+                margin-left: khoảng cách phía trái
+            */
+            margin-top: 50px;
+            margin-right: 50px;
+            margin-bottom: 150px;
+            margin-left: 150px;
+            /* margin shorthand
+                margin: top right bottom left;
+                margin: top right/left bottom;
+                margin: top/bottom right/left;
+                margin: top/right/bottom/left;
+            */
+            margin: 50px 100px 150px 200px;
+            margin: 50px 100px 150px;
+            margin: 50px 100px;
+            margin: 50px;
+            /* padding: khoảng cách bên trong của khối với nội dung
+                padding không thể có giá trị ấm
+            */
+            padding: 100px;
+            /* Có thể định nghĩa padding cho từng hướng:
+                padding-top: khoảng cách phía trên
+                padding-right: khoảng cách phía phải
+                padding-bottom: khoảng cách phía dưới
+                padding-left: khoảng cách phía trái
+            */
+            padding-top: 50px;
+            padding-right: 50px;
+            padding-bottom: 150px;
+            padding-left: 150px;
+            /* padding shorthand
+                padding: top right bottom left;
+                padding: top right/left bottom;
+                padding: top/bottom right/left;
+                padding: top/right/bottom/left;
+            */
+            padding: 50px 100px 150px 200px;
+            padding: 50px 100px 150px;
+            padding: 50px 100px;
+            padding: 50px;
+            /* display: quy định cách 1 thẻ html hiển thị theo khối như nào
+                2 cách hiển thị:
+                    inline:
+                        hiển thị theo dòng, không chiếm hết chiều ngang
+                        không thể chỉnh width, height cho các thẻ có display là inline
+                        1 số thẻ điển hình: <a>, <span>
+                    block:
+                        hiển thị theo khối, chiếm hết chiều ngang
+                        có thể chỉnh width, height cho các thẻ có display là block
+                        1 số thẻ điển hình: <div>, <p>, <h1> - <h6>
+                Các giá trị của thuộc tính display:
+                    inline: hiển thị theo dòng
+                    block: hiển thị theo khối
+                    inline-block: hiển thị theo dòng nhưng có thể chỉnh width, height
+                    none: ẩn thẻ html
+            */
+            /* display: inline; */
+        }
+
+        a {
+            background-color: red;
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+        }
+
+        h1 {
+            display: none;
+        }
+
+        .container {
+            color: white;
+            display: flex;
+            width: 100%;
+            height: 200px;
+            /* Thuộc tính liên quan đến display flex (Flex box)
+                flex-direction: quy định hướng của các phần tử con trong khối cha
+                    row: theo hàng ngang (mặc định)
+                    row-reverse: theo hàng ngang nhưng ngược lại
+                    column: theo cột dọc
+                    column-reverse: theo cột dọc nhưng ngược lại
+                justify-content: căn chỉnh các phần tử con theo chiều ngang
+                    flex-start: căn trái (mặc định)
+                    flex-end: căn phải
+                    center: căn giữa
+                    space-between: khoảng cách giữa các phần tử con bằng nhau, phần tử đầu và cuối sát vào 2 cạnh của khối cha
+                    space-around: khoảng cách giữa các phần tử con bằng nhau, phần tử đầu và cuối cách đều với 2 cạnh của khối cha
+                align-items: căn chỉnh các phần tử con theo chiều dọc
+                    flex-start: căn trên (mặc định)
+                    flex-end: căn dưới
+                    center: căn giữa
+                    stretch: kéo dài hết chiều cao của khối cha
+            */
+            flex-direction: row-reverse;
+            justify-content: space-around;
+            /* Cho phép các khối xuống dòng */
+            flex-wrap: wrap;
+        }
+        /*
+            display: grid;
+        */
+        /* position: định nghĩa vị trí của các phần tử
+                static: vị trí mặc định (mặc định)
+                relative: vị trí tương đối so với vị trí mặc định
+                absolute: vị trí tuyệt đối so với khối cha gần nhất có position là ralative hoặc absolute,
+                    trong trường hợp không có khối cha nào có position là relative hoặc absolute thì vị trí tuyệt đối dựa theo body
+                fixed: vị trí cố định
+            position luôn đi kèm các thuộc tính xác định vị trí:
+                top: khoảng cách từ trên xuống
+                right: khoảng cách từ phải sang
+                bottom: khoảng cách từ dưới lên
+                left: khoảng cách từ trái sang
+            z-index: xác định thứ tự xếp chồng của các phần tử, phần tử có z-index càng lớn thì sẽ nằm trên các phần tử có z-index nhỏ hơn
+        */
+        .container-2 {
+            width: 100%;
+            height: 800px;
+            background-color: lightgray;
+            position: relative;
+        }
+        .container-2 div{
+            width: 50%;
+            height: 200px;
+        }
+        #container-2-div1 {
+            background-color: red;
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+        #container-2-div2 {
+            background-color: greenyellow;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+            /* Tạo thanh kéo khi nội dung vượt quá kích thước của khối */
+            overflow: scroll;
+        }
+        #container-2-div3 {
+            background-color: blue;
+            position: fixed;
+            top: 50px;
+            left: 50px;
+        }
+        /* float: trôi khối sang 1 bên
+            left: trôi sang trái
+            right: trôi sang phải
+        */
+    </style>
+</head>
+<body>
+    <p class="p1">P tag P tag P tag P tag P tag P tag P tag P tag P tag P tag P tag P tag P tag P tag P tag P tag P tag P tag P tag P tag P tag </p>
+    <p class="p1">P tag</p>
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <h1>H1 tag</h1>
+    <div class="container">
+        <div style="background-color: red; width: 30%;">Box 1</div>
+        <div style="background-color: greenyellow; width: 30%;">Box 2</div>
+        <div style="background-color: blue; width: 30%;">Box 3</div>
+        <div style="background-color: silver; width: 30%;">Box 4</div>     
+    </div>
+    <div class="container-2">
+        <div id="container-2-div1">Div 1</div>
+        <div id="container-2-div2">
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+            Div 2
+        </div>
+        <div id="container-2-div3">Div 3</div>
+    </div>
+    <div>
+        <div style="background-color: lightblue; float: left;">Div 2 - 1</div>
+        <div style="background-color: lightgreen; float: left;">Div 2 - 2</div>
+    </div>
+
+</body>
