@@ -1,0 +1,36 @@
+<!-- Khai báo phiên bản html5 -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            color: green;
+            text-decoration: none;
+        }
+        a:hover {
+            color: red;
+        }
+        input:focus {
+            border: 2px solid red;
+        }
+        a:first-child {
+            background-color: yellow;
+        }
+        label::first-letter{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="#">Link 1</a><br>
+        <a href="#">Link 2</a><br>
+        <label for="name">Họ tên: </label><input type="text" placeholder="Nhập tên" id="name"><br>
+    </div>
+    
+</body>
