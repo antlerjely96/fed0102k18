@@ -1,0 +1,44 @@
+<!-- Khai báo phiên bản html5 -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </script>
+</head>
+<body>
+    <!-- Internal JS -->
+    <script>
+        /*
+            2. Kiem tra tuoi:
+                Neu tuoi > 0 and tuoi < 6: hoc mau giao
+                Neu tuoi >= 6 and tuoi < 11: hoc cap 1
+                Neu tuoi >= 11 and tuoi < 16: hoc cap 2
+                Neu tuoi >= 16 and tuoi < 18: hoc cap 3
+                Neu tuoi >= 18 and tuoi < 23: Hoc dai hoc
+                Neu tuoi >= 23 and tuoi <= 65: Di lam
+                Con lai: Nghi huu
+                
+        */
+        let a = 17;
+        if(a <= 0){
+            console.log("Nhập sai");
+        } else if (a < 6){
+            console.log("hoc mau giao");
+        } else if(a < 11){
+            console.log("hoc cap 1");
+        } else if(a < 16){
+            console.log("hoc cap 2");
+        } else if(a < 18){
+            console.log("hoc cap 3");
+        } else if(a < 23){
+            console.log("hoc dai hoc");
+        } else if(a <= 65){
+            console.log("di lam");
+        } else {
+            console.log("nghi huu");
+        }
+    </script>
+</body>
