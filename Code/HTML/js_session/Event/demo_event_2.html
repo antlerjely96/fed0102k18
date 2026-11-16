@@ -14,7 +14,23 @@
         /* 
             2. Nhập số nguyên a từ bàn phím. Kiểm tra a là số âm hay dương
         */
+        function kiemTra(){
+            var a = Number(document.getElementById("num_a").value);
+            if (a > 0){
+                document.getElementById("result").innerHTML = "a là số dương";
+            } else if (a < 0){
+                document.getElementById("result").innerHTML = "a là số âm";  
+            } else if (a == 0){
+                document.getElementById("result").innerHTML = "a không phải là số dương, cũng không phải số âm";
+            } else {
+                document.getElementById("result").innerHTML = "Vui lòng nhập lại";
+            }
+        }
 
     </script>
-
+    <form>
+        a: <input id="num_a" type="text"><br>
+        <span id="result"></span><br>
+        <button type="button" onclick="kiemTra()">Kiểm Tra</button>
+    </form>
 </body>

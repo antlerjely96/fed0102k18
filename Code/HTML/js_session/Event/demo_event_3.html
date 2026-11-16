@@ -1,0 +1,70 @@
+<!-- Khai báo phiên bản html5 -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </script>
+</head>
+<body>
+    <!-- Internal JS -->
+    <script>
+        /* 
+            3. Nhập 4 số nguyên a, b, c, d từ bàn phím.
+            Tìm max, min
+        */
+
+        function timMax(){
+            // Lấy a, b, c, d từ form
+            var a = Number(document.getElementById("number_a").value);
+            var b = Number(document.getElementById("number_b").value);
+            var c = Number(document.getElementById("number_c").value);
+            var d = Number(document.getElementById("number_d").value);
+            var max = a;
+            // Tìm max
+            if(max < b){
+                max = b;
+            }
+            if(max < c){
+                max = c;
+            }
+            if(max < d){
+                max = d;
+            }
+            document.getElementById("result_max").innerHTML = "max = " + max;
+        }
+
+        function timMin(){
+            // Lấy a, b, c, d từ form
+            var a = Number(document.getElementById("number_a").value);
+            var b = Number(document.getElementById("number_b").value);
+            var c = Number(document.getElementById("number_c").value);
+            var d = Number(document.getElementById("number_d").value);
+            var min = a;
+            // Tìm min
+            if(min > b){
+                min = b;
+            }
+            if(min > c){
+                min = c;
+            }
+            if(min > d){
+                min = d;
+            }
+            document.getElementById("result_min").innerHTML = "min = " + min;
+        }
+    </script>
+    
+    <form>
+        a: <input type="text" id="number_a"><br>
+        b: <input type="text" id="number_b"><br>
+        c: <input type="text" id="number_c"><br>
+        d: <input type="text" id="number_d"><br>
+        <button type="button" onclick="timMax()">Tìm max</button>
+        <button type="button" onclick="timMin()">Tìm min</button><br>
+        <span id="result_max"></span><br>
+        <span id="result_min"></span>
+    </form>
+</body>
